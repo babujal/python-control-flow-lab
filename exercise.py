@@ -83,7 +83,8 @@ def check_voting_eligibility():
     except ValueError as e:
         print(f"The following error occurred: {e}")
 # Call the function
-check_voting_eligibility()
+# check_voting_eligibility()
+# Source for try except block: https://www.serveracademy.com/blog/python-try-except/
 
 #///////////////////////////////////////////////////////////////////////////
 
@@ -105,9 +106,21 @@ check_voting_eligibility()
 # - Convert the string input to an integer using `int()`.
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
-# def calculate_dog_years():
+def calculate_dog_years():
     # Your control flow logic goes here
+    try:
+        dog_age = input('Input a dogs age:')
+        age_to_int = int(dog_age)
+        age = 0
+        if age_to_int < 3:
+            age = age_to_int * 10
+            print(f"The dog's age in dog years is: {age}")
+        else:
+            age = age_to_int * 7
+            print(f"The dog's age in dog years is: {age}")
+    except ValueError as e:
+        print(f"The following error occurred: {e}")
 
 # Call the function
-# calculate_dog_years()
+calculate_dog_years()
 
