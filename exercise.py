@@ -73,14 +73,15 @@ def check_letter():
 
 def check_voting_eligibility():
     # Your control flow logic goes here
-    user_age = input('Please enter your age:')
-    age_to_int = int(user_age)
-
-    if age_to_int < 18:
-        print('You are not eligible to vote')
-    else:
-        print('You are eligible to vote')    
-
+    try:
+        user_age = input('Please enter your age:')
+        age_to_int = int(user_age)
+        if age_to_int < 18:
+            print('You are not eligible to vote')
+        else:
+            print('You are eligible to vote')
+    except ValueError:
+        print('Wrong age value, please enter a nummber for age value.')
 # Call the function
 check_voting_eligibility()
 
