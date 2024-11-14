@@ -81,7 +81,7 @@ def check_voting_eligibility():
         else:
             print('You are eligible to vote')
     except ValueError as e:
-        print(e)
+        print(f"The following error occurred: {e}")
 # Call the function
 check_voting_eligibility()
 
